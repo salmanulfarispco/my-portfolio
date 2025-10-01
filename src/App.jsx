@@ -1,10 +1,9 @@
-
-import MyPortfolio from "./MyPortfolio";
+import Myportfolio from "./Myportfolio";
 
 function App() {
   return (
     <div>
-      <MyPortfolio />
+      <Myportfolio />
     </div>
   );
 }

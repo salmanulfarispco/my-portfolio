@@ -1,7 +1,15 @@
 import "./Portfolio.css";
 import { useState } from "react";
+import salmanPort from "./assets/salmanport.png";
+import screenshot from './assets/screenshot.png';
+import foodImage from './assets/food.png';
+import Todolist from './assets/todo.png';
+import Doctor from './assets/doctor.png';
 
-function MyPortfolio() {
+
+
+
+function Myportfolio() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -44,7 +52,20 @@ function MyPortfolio() {
                     </p>
 
                     <div className="btn-sci">
-                        <a href="/Salmanulfaris.pdf" className="btn">Download CV</a>
+                        <a href="/salmanulfaris.pdf" download target="_blank" rel="noopener noreferrer">
+                            <button style={{
+                                padding: "10px 20px",
+                                backgroundColor: "#4CAF50",
+                                color: "white",
+                                border: "none",
+                                borderRadius: "5px",
+                                cursor: "pointer",
+                                fontSize: "16px"
+                            }}>
+                                Download CV
+                            </button>
+                        </a>
+
                         <div className="sci">
                             <a href="#"><i className="bx bxl-github"></i></a>
                             <a href="#"><i className="bx bxl-linkedin"></i></a>
@@ -58,7 +79,8 @@ function MyPortfolio() {
                 <div className="home-img">
                     <div className="img-box">
                         <div className="img-item">
-                            <img src="salmanport.png" alt="My Profile" />
+                            <img src={salmanPort} alt="Portfolio" />
+
                         </div>
                     </div>
                 </div>
@@ -66,7 +88,7 @@ function MyPortfolio() {
 
             {/* About Section */}
             <section className="about" id="about">
-                <h2>About Me</h2>
+                <h2>About Me </h2>
                 <p>
                     I am a passionate <strong>Full Stack Web Developer and Web Designer</strong> with over a year of
                     consistent practice and project-building experience. My expertise lies in creating clean, responsive,
@@ -107,7 +129,7 @@ function MyPortfolio() {
                 <h2>My Projects</h2>
 
                 <div className="project-item">
-                    <img src="doctor.png" alt="Doctor Appointment Booking System" />
+                    <img src={Doctor} alt="Doctor" />
                     <h3>Doctor Appointment Booking System</h3>
                     <p>
                         A full-stack web application with user management, database integration,
@@ -116,7 +138,8 @@ function MyPortfolio() {
                 </div>
 
                 <div className="project-item">
-                    <img src="screenshot.png" alt="Clothing Website" />
+                    <img src={screenshot} alt="Clothing Website" />
+
                     <h3>Clothing Website</h3>
                     <p>
                         Built with HTML, CSS, and React.js featuring kids, women's, and men's wear
@@ -125,7 +148,8 @@ function MyPortfolio() {
                 </div>
 
                 <div className="project-item">
-                    <img src="maxresdefault (1).png" alt="Food Recipe Website" />
+                    <img src={foodImage} alt="Food" />
+
                     <h3>Food Recipe Website</h3>
                     <p>
                         Created using HTML, CSS, Bootstrap, and JavaScript. Users can browse recipes,
@@ -134,7 +158,7 @@ function MyPortfolio() {
                 </div>
 
                 <div className="project-item">
-                    <img src="todo.png" alt="To Do List" />
+                    <img src={Todolist} alt="todolist" />
                     <h3>To Do List</h3>
                     <p>
                         A simple task management app built with HTML and CSS to keep track of
@@ -189,4 +213,4 @@ function MyPortfolio() {
     );
 }
 
-export default MyPortfolio;
+export default Myportfolio;
